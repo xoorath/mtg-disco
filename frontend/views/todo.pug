@@ -1,0 +1,33 @@
+doctype html
+html(class="no-js" lang="")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
+    title Page Title
+    meta(name="description" content="")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="apple-touch-icon" href="apple-touch-icon.png")
+    
+    link(rel="stylesheet" href="./bootstrap/dist/css/bootstrap"+self.min+".css")
+    link(rel="stylesheet" href="./todo.css")
+
+    script(src="./jquery/dist/jquery"+self.min+".js")
+    script(src="./bootstrap/dist/js/bootstrap"+self.min+".js")
+  body
+    //
+        [if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]
+    // Add your site or application content here
+    div.container
+      div.row
+        h1 Hello world! This is a Pug
+      div.row
+        img(src="http://pugholdit.herokuapp.com/400x200.jpg")
+      div.row
+        pre node -v #{self.nodev}
+        pre pretty #{self.pretty}
+
+    if self.GoogleAnalytics
+      script  window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date; ga('create','#{self.GoogleAnalytics}','auto');ga('send','pageview')
+      script(src="https://www.google-analytics.com/analytics.js" async defer)
